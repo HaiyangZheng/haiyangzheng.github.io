@@ -6,9 +6,9 @@
 # `jekyll serve`. If you change this file, please restart the server process.
 
 # Site Settings
-title                    : "Nan Pu"
-description              : "Postdoctoral Researcher of Deep Learning"
-repository               : "TPCD/TPCD.github.io"
+title                    : "Haiyang Zheng"
+description              : "Multimedia and Human Understanding Group (MHUG)"
+repository               : "HaiyangZheng/haiyangzheng.github.io"
 google_scholar_stats_use_cdn : false
 
 # google analytics
@@ -21,15 +21,15 @@ baidu_site_verification  :  # get baidu_site_verification from https://ziyuan.ba
 
 # Site Author
 author:
-  name             : "Nan Pu"
+  name             : "Haiyang Zheng"
   avatar           : "images/android-chrome-512x512.png"
-  bio              : "Multimedia and Human Understanding Group (MHUG)"
+  bio              : "University of Trento"
   location         : "Trento, Italy"
-  employer         : "University of Trento"
+  employer         : 
   pubmed           : 
-  googlescholar    : "https://scholar.google.com/citations?user=QBb2DjwAAAAJ"
-  email            : "nan.pu@unitn.it"
-  researchgate     : "https://www.researchgate.net/profile/Nan-Pu" # e.g., "https://www.researchgate.net/profile/yourprofile"
+  googlescholar    : "https://scholar.google.com.sg/citations?view_op=list_works&hl=zh-CN&hl=zh-CN&user=UDXB_rsAAAAJ"
+  email            : "haiyang.zheng@unitn.it"
+  researchgate     : # e.g., "https://www.researchgate.net/profile/yourprofile"
   uri              :
   bitbucket        :
   codepen          :
@@ -37,14 +37,14 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "TPCD" # e.g., "github username"
+  github           : "HaiyangZheng" # e.g., "github username"
   google_plus      :
   keybase          :
   instagram        :
   impactstory      : # e.g., "https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
   linkedin         : # e.g., "linkedin username"
-  dblp             : "https://dblp.org/pid/210/5100.html" # e.g., "https://dblp.org/pid/xx/xxxx.html"
+  dblp             : "https://dblp.org/pid/xx/xxxx.html"
   orcid            : # e.g., "https://orcid.org/xxxx"
   pinterest        :
   soundcloud       :
