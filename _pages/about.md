@@ -54,5 +54,4 @@ Ruilin Zhang, **Haiyang Zheng**, Hongpeng Wang
 
 ACM International Conference on Multimedia Retrieval (ICMR 2023).
 
-<script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=868686&w=530&t=tt&d=Tqpk_h7toGxUH-BshURkYMTaJQ0K3OsVUvFkW4SY-sU&co=ffffff&ct=000000'></script>
-<script src="assets/js/jquery.min.js"></script> <script src="assets/js/jquery.poptrox.min.js"></script> <script src="assets/js/browser.min.js"></script> <script src="assets/js/breakpoints.min.js"></script> <script src="assets/js/util.js"></script> <script src="assets/js/main.js"></script>
+<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=cEPNIgw1HlE2AyVA4HKUNNZDyGXiliFvf9p_ii8W_aU&cl=ffffff&w=a"></script>
