@@ -11,7 +11,7 @@ redirect_from:
 
 <span class='anchor' id='about-me'></span>
 
-I am a first year PhD student of [MHUG](http://mhug.disi.unitn.it/#/) at the University of Trento, supervised by [Prof. Nicu Sebe](https://disi.unitn.it/~sebe/), and am fortunate to work with [Prof. Zhun Zhong](https://zhunzhong.site) and [Dr. Nan Pu](https://tpcd.github.io/). My current research interests are Generalized Category Discovery and On-the-fly Category Discovery. Previously, I obtained my Bachelor’s degree in Vehicle Engineering from Harbin Institute of Technology, Weihai, and my Master’s degree in Computer Technology from Harbin Institute of Technology, Shenzhen, supervised by [Prof. Hongpeng Wang](http://faculty.hitsz.edu.cn/wanghongpeng). 
+I am a first year PhD student of [MHUG](http://mhug.disi.unitn.it/#/) at the University of Trento, supervised by [Prof. Nicu Sebe](https://disi.unitn.it/~sebe/) and [Prof. Zhun Zhong](https://zhunzhong.site), and am fortunate to work with [Prof. Nan Pu](https://tpcd.github.io/). My current research interests are Generalized Category Discovery and On-the-fly Category Discovery. Previously, I obtained my Bachelor’s degree in Vehicle Engineering from Harbin Institute of Technology, Weihai, and my Master’s degree in Computer Technology from Harbin Institute of Technology, Shenzhen, supervised by [Prof. Hongpeng Wang](http://faculty.hitsz.edu.cn/wanghongpeng). 
 
 
 # 🔥 News
