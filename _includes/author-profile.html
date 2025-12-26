@@ -9,14 +9,13 @@
   </div>
 
   <div class="author__content" style="text-align: center;">
-    <h3 class="author__name">{{ author.name }}</h3>
-    
     {% if author.chinese_name %}
       <div class="author__chinese-name" style="font-size: 1.2em; font-weight: bold; margin-bottom: 10px;">
         {{ author.chinese_name }}
       </div>
     {% endif %}
-
+    <h3 class="author__name">{{ author.name }}</h3>
+  
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
 
     {% if site.description %}
