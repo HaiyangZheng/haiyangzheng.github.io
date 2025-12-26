@@ -8,13 +8,14 @@
     <img src="{{ author.avatar }}" class="author__avatar" alt="{{ author.name }}">
   </div>
 
-  <div class="author__content" style="text-align: center;">
+<div class="author__content" style="text-align: center;">
     {% if author.chinese_name %}
-      <div class="author__chinese-name" style="font-size: 1.2em; font-weight: bold; margin-bottom: 10px;">
+      <div class="author__chinese-name" style="font-size: 1.8em; font-weight: bold; margin-top: 20px; margin-bottom: 0; line-height: 1.2;">
         {{ author.chinese_name }}
       </div>
     {% endif %}
-    <h3 class="author__name">{{ author.name }}</h3>
+    
+    <h3 class="author__name" style="margin-top: 5px; margin-bottom: 10px;">{{ author.name }}</h3>
   
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
 
