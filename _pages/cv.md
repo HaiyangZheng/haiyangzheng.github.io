@@ -77,63 +77,35 @@ ul.cv-list li strong {
     .cv-date { float: none; display: block; margin-bottom: 5px;}
 }
 
-/* --- 折叠相册样式 --- */
-
-details {
-    /* 确保 details 本身没有奇怪的布局影响 */
-    display: block;
-    margin-top: 10px;
-}
-
-details > summary {
+/* --- 新的折叠按钮样式 (JS版) --- */
+.gallery-trigger {
     display: block;
     width: 100%;
-    position: relative;
-    z-index: 10;
-    
     cursor: pointer;
-    color: #000000;
+    color: #000000; /* 默认黑色 */
     font-size: 0.9em;
     font-weight: 600;
-    
     padding: 10px 0;
     margin: 5px 0;
     
-    /* 🔥 新增：优化移动端触摸体验 */
-    touch-action: manipulation;       /* 告诉浏览器只允许点击和滚动，禁止双击缩放 */
-    -webkit-tap-highlight-color: transparent; /* 去掉点击时那个灰色的背景块 */
-    
-    /* 之前的禁止选中保持不变，但在移动端 touch-action 优先级更高 */
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
+    /* 移动端防误触优化 */
+    touch-action: manipulation; 
+    -webkit-tap-highlight-color: transparent;
     user-select: none;
+    -webkit-user-select: none;
     
-    outline: none;
     transition: color 0.2s;
 }
 
-/* 隐藏默认箭头 */
-details > summary::-webkit-details-marker {
-    display: none;
-}
-details > summary::marker {
-    display: none; /* 针对较新浏览器的标准写法 */
-    content: "";
-}
-
-details > summary:hover {
-    color: #b71c1c;
+.gallery-trigger:hover {
+    color: #b71c1c; /* 悬停变红 */
     text-decoration: underline;
 }
 
-details > summary:focus {
-    outline: none;
-}
-
-/* 相册容器 */
-.gallery-container {
-    display: flex;
+/* 隐藏相册容器，通过 JS 显示 */
+#fsae-gallery {
+    display: none; /* 默认隐藏 */
+    /* 其它样式保持 flex 布局 */
     flex-wrap: wrap;
     gap: 10px;
     margin-top: 10px;
@@ -142,18 +114,16 @@ details > summary:focus {
     border-radius: 8px;
 }
 
-/* 图片统一高度 */
+/* 图片样式保持不变 */
 .gallery-container img {
-    height: 120px; /* 统一高度，像胶卷一样排列 */
+    height: 120px; 
     width: auto;
     border-radius: 4px;
     object-fit: cover;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    background: #ddd; /* 加载前的占位色 */
+    background: #ddd; 
     transition: transform 0.2s;
 }
-
-/* 图片悬停放大效果 */
 .gallery-container img:hover {
     transform: scale(1.05);
     z-index: 10;
@@ -203,12 +173,7 @@ Here is a comprehensive overview of my academic and professional background.
 
 ## 🌟 Academic Service
 
-* **Conference Reviewer:**
-    * Neural Information Processing Systems (**NeurIPS**)
-    * IEEE Conference on Computer Vision and Pattern Recognition (**CVPR**)
-    * International Conference on Machine Learning (**ICML**)
-    * ACM International Conference on Multimedia (**ACM MM**)
-    * European Conference on Computer Vision (**ECCV**)
+* **Conference Reviewer:** NeurIPS, CVPR, ICML, ACM MM, ECCV
 
 ---
 
@@ -249,21 +214,31 @@ Here is a comprehensive overview of my academic and professional background.
                 <li>This experience honed my engineering intuition and teamwork skills under high pressure.</li>
             </ul>
 
-            <details>
-                <summary onclick="">▶️ Click to View Gallery</summary>
-                
-                <div class="gallery-container">
-                    <img src="/images/hrt1.png" alt="Design Defense" title="Design Defense Presentation">
-                    <img src="/images/hrt2.jpg" alt="Team Photo" title="Team Group Photo">
-                    <img src="/images/hrt3.jpg" alt="Skidpad Event" title="Preparing for Skidpad (Figure-8) Event">
-                    <img src="/images/hrt4.jpg" alt="Debugging" title="Vehicle Debugging & Testing">
-                    
-                    <p style="width: 100%; margin: 5px 0 0 0; font-size: 0.85em; color: #666;">
-                        * Snapshots from the 2019 National Competition season.
-                    </p>
-                </div>
-            </details>
+            <div class="gallery-trigger" onclick="toggleGallery()">
+                ▶️ Click to View Gallery
+            </div>
             
-        </div>
-    </div>
-</div>
+            <div id="fsae-gallery" class="gallery-container">
+                <img src="/images/hrt1.png" alt="Design Defense" title="Design Defense Presentation" loading="lazy">
+                <img src="/images/hrt2.jpg" alt="Team Photo" title="Team Group Photo" loading="lazy">
+                <img src="/images/hrt3.jpg" alt="Skidpad Event" title="Preparing for Skidpad Event" loading="lazy">
+                <img src="/images/hrt4.jpg" alt="Debugging" title="Vehicle Debugging & Testing" loading="lazy">
+                
+                <p style="width: 100%; margin: 5px 0 0 0; font-size: 0.85em; color: #666;">
+                    * Snapshots from the 2019 National Competition season.
+                </p>
+            </div>
+
+            <script>
+                function toggleGallery() {
+                    var gallery = document.getElementById("fsae-gallery");
+                    // 只要判断是否有 flex 这个 display 属性即可
+                    if (gallery.style.display === "flex") {
+                        gallery.style.display = "none";
+                    } else {
+                        gallery.style.display = "flex";
+                    }
+                }
+            </script>
+
+        </div> </div> </div> 
