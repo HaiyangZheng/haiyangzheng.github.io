@@ -102,7 +102,7 @@ ul.cv-list li strong {
     text-decoration: underline;
 }
 
-/* 隐藏相册容器，通过 JS 显示 */
+/* 隐藏相册容器 */
 #fsae-gallery {
     display: none; /* 默认隐藏 */
     /* 其它样式保持 flex 布局 */
@@ -112,6 +112,11 @@ ul.cv-list li strong {
     padding: 10px;
     background: #f1f1f1;
     border-radius: 8px;
+}
+
+/* 🔥 关键修改：当有 .show 这个类时，强制显示为 flex */
+#fsae-gallery.show {
+    display: flex !important;
 }
 
 /* 图片样式保持不变 */
