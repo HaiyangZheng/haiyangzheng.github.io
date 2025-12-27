@@ -77,18 +77,26 @@ ul.cv-list li strong {
     .cv-date { float: none; display: block; margin-bottom: 5px;}
 }
 
-/* --- 新的折叠按钮样式 (JS版) --- */
+/* --- 新的折叠按钮样式 (Button版 - 终极修复) --- */
 .gallery-trigger {
+    /* 🔥 核心修改：重置 button 的默认丑陋样式，让它看起来像文字 */
+    background: none;
+    border: none;
+    outline: none;
+    text-align: left;
+    font-family: inherit;
+    
+    /* 保持布局 */
     display: block;
     width: 100%;
     cursor: pointer;
-    color: #000000; /* 默认黑色 */
+    color: #000000;
     font-size: 0.9em;
     font-weight: 600;
     padding: 10px 0;
     margin: 5px 0;
     
-    /* 移动端防误触优化 */
+    /* 移动端优化 */
     touch-action: manipulation; 
     -webkit-tap-highlight-color: transparent;
     user-select: none;
@@ -219,9 +227,9 @@ Here is a comprehensive overview of my academic and professional background.
                 <li>This experience honed my engineering intuition and teamwork skills under high pressure.</li>
             </ul>
 
-            <div class="gallery-trigger" role="button" onclick="toggleGallery(event)">
+            <button type="button" class="gallery-trigger" onclick="toggleGallery(event)">
                 ▶️ Click to View Gallery
-            </div>
+            </button>
             
             <div id="fsae-gallery" class="gallery-container">
                 <img src="/images/hrt1.png" alt="Design Defense" title="Design Defense Presentation" loading="lazy">
@@ -236,17 +244,21 @@ Here is a comprehensive overview of my academic and professional background.
 
             <script>
                 function toggleGallery(event) {
-                    // 🔥 核心修复：阻止浏览器的默认导航或缩放行为
+                    // 🔥 核心修复：阻止浏览器的默认导航，并阻止事件冒泡防止主题脚本干扰
                     if (event) {
                         event.preventDefault();
                         event.stopPropagation();
+                        // 尝试立刻停止传播，防止 jQuery 等库捕获
+                        if (event.stopImmediatePropagation) {
+                            event.stopImmediatePropagation();
+                        }
                     }
 
                     var gallery = document.getElementById("fsae-gallery");
-                    
-                    // 使用 classList.toggle 来切换，比直接操作 style 更稳健
                     gallery.classList.toggle("show");
                 }
             </script>
 
-        </div> </div> </div> 
+        </div> 
+    </div> 
+</div>
