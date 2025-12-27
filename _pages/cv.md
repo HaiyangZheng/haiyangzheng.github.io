@@ -219,7 +219,7 @@ Here is a comprehensive overview of my academic and professional background.
                 <li>This experience honed my engineering intuition and teamwork skills under high pressure.</li>
             </ul>
 
-            <div class="gallery-trigger" onclick="toggleGallery()">
+            <div class="gallery-trigger" role="button" onclick="toggleGallery(event)">
                 ▶️ Click to View Gallery
             </div>
             
@@ -235,14 +235,17 @@ Here is a comprehensive overview of my academic and professional background.
             </div>
 
             <script>
-                function toggleGallery() {
-                    var gallery = document.getElementById("fsae-gallery");
-                    // 只要判断是否有 flex 这个 display 属性即可
-                    if (gallery.style.display === "flex") {
-                        gallery.style.display = "none";
-                    } else {
-                        gallery.style.display = "flex";
+                function toggleGallery(event) {
+                    // 🔥 核心修复：阻止浏览器的默认导航或缩放行为
+                    if (event) {
+                        event.preventDefault();
+                        event.stopPropagation();
                     }
+
+                    var gallery = document.getElementById("fsae-gallery");
+                    
+                    // 使用 classList.toggle 来切换，比直接操作 style 更稳健
+                    gallery.classList.toggle("show");
                 }
             </script>
 
