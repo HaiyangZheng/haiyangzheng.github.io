@@ -1,16 +1,39 @@
+<style>
+  /* 1. 定义选中状态的样式 */
+  .active-nav {
+      font-weight: bold !important;      /* 加粗 */
+      border-bottom: 3px solid #d9230f;  /* 底部红线 (你可以改成你喜欢的颜色) */
+      color: #000 !important;            /* 字体变黑 */
+  }
+  
+  /* 2. 修复 Homepage 默认可能过粗的问题，设为默认正常粗细 */
+  .masthead__menu-item a {
+      font-weight: normal; 
+  }
+</style>
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         <button><div class="navicon"></div></button>
         <ul class="visible-links">
+          
           <li class="masthead__menu-item masthead__menu-item--lg masthead__menu-home-item">
-            <a href="/">Homepage</a>
+            <a href="/" {% if page.url == "/" %}class="active-nav"{% endif %}>Homepage</a>
           </li>
           
           {% for link in site.data.navigation.main %}
-            <li class="masthead__menu-item"><a href="{{ domain }}{{ link.url }}">{{ link.title }}</a></li>
+            <li class="masthead__menu-item">
+              {% assign active_class = "" %}
+              {% if page.url contains link.url %}
+                {% assign active_class = "active-nav" %}
+              {% endif %}
+              
+              <a href="{{ domain }}{{ link.url }}" class="{{ active_class }}">{{ link.title }}</a>
+            </li>
           {% endfor %}
+
         </ul>
         <ul class="hidden-links hidden"></ul>
       </nav>
