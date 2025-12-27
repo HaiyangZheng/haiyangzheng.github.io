@@ -44,5 +44,5 @@ My research focuses on computer vision, with an emphasis on open-world visual re
 ---
 
 <div style="width: 100%; max-width: 530px; margin: 20px auto;">
-    <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=000000&w=a&t=tt&d=cEPNIgw1HlE2AyVA4HKUNNZDyGXiliFvf9p_ii8W_aU&co=ffffff&ct=808080'></script>
+    <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=a&t=tt&d=cEPNIgw1HlE2AyVA4HKUNNZDyGXiliFvf9p_ii8W_aU'></script>
 </div>
