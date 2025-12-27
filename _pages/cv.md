@@ -86,20 +86,24 @@ details {
 }
 
 details > summary {
-    display: block;      /* 🔥 关键1：从列表项变成块级元素，铺满整行 */
-    width: 100%;         /* 🔥 关键2：宽度填满，点击旁边空白处也能触发 */
-    position: relative;  /* 🔥 关键3：开启定位 */
-    z-index: 10;         /* 🔥 关键4：强制提升层级，防止被上方元素遮挡 */
+    display: block;
+    width: 100%;
+    position: relative;
+    z-index: 10;
     
     cursor: pointer;
     color: #000000;
     font-size: 0.9em;
     font-weight: 600;
     
-    padding: 10px 0;     /* 🔥 关键5：大幅增加点击区域（上下各加10px） */
-    margin: 5px 0;       
+    padding: 10px 0;
+    margin: 5px 0;
     
-    /* 禁止文本选中 */
+    /* 🔥 新增：优化移动端触摸体验 */
+    touch-action: manipulation;       /* 告诉浏览器只允许点击和滚动，禁止双击缩放 */
+    -webkit-tap-highlight-color: transparent; /* 去掉点击时那个灰色的背景块 */
+    
+    /* 之前的禁止选中保持不变，但在移动端 touch-action 优先级更高 */
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -246,15 +250,12 @@ Here is a comprehensive overview of my academic and professional background.
             </ul>
 
             <details>
-                <summary>▶️ Click to View Gallery</summary>
+                <summary onclick="">▶️ Click to View Gallery</summary>
                 
                 <div class="gallery-container">
                     <img src="/images/hrt1.png" alt="Design Defense" title="Design Defense Presentation">
-                    
                     <img src="/images/hrt2.jpg" alt="Team Photo" title="Team Group Photo">
-                    
                     <img src="/images/hrt3.jpg" alt="Skidpad Event" title="Preparing for Skidpad (Figure-8) Event">
-                    
                     <img src="/images/hrt4.jpg" alt="Debugging" title="Vehicle Debugging & Testing">
                     
                     <p style="width: 100%; margin: 5px 0 0 0; font-size: 0.85em; color: #666;">
@@ -262,6 +263,7 @@ Here is a comprehensive overview of my academic and professional background.
                     </p>
                 </div>
             </details>
+            
         </div>
     </div>
 </div>
