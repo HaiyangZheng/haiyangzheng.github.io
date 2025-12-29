@@ -121,7 +121,7 @@ author_profile: true
         </div>
         <div class="pub-links">
             <a href="https://arxiv.org/abs/2512.12667">[Paper]</a>
-            <a href="https://haiyangzheng.github.io/OWDFA-CAL/">[Code]</a>
+            <a href="https://github.com/HaiyangZheng/OWDFA-CAL">[Code]</a>
         </div>
         <div class="pub-desc">
             Mitigating confidence skew and automatically estimating novel forgery types for robust open-world DeepFake attribution.
