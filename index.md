@@ -13,6 +13,7 @@ I am a second-year PhD student at the University of Trento, affiliated with the 
 Previously, I obtained my Master’s degree in Computer Technology from Harbin Institute of Technology, Shenzhen, supervised by [Prof. Hongpeng Wang](https://homepage.hit.edu.cn/wanghongpeng), and my Bachelor’s degree in Vehicle Engineering from Harbin Institute of Technology, Weihai.
 
 # 🔥 News
+* **2026.02**: One paper is accepted by **CVPR 2026**.
 * **2025.11**: One paper is accepted by **AAAI 2026**.
 * **2025.06**: One paper is accepted by **ICCV 2025**. Congratulations to Xiao!
 * **2024.09**: One paper is accepted by **NeurIPS 2024**.

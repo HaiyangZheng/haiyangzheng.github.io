@@ -109,6 +109,28 @@ author_profile: true
 
 <div class="pub-item">
     <div class="pub-img">
+        <img src="/images/pubs/cvpr26_eagc.png" alt="CVPR 2026 Paper">
+    </div>
+    <div class="pub-content">
+        <div class="pub-title">The Devil Is in Gradient Entanglement: Energy-Aware Gradient Coordinator for Robust Generalized Category Discovery</div>
+        <div class="pub-authors">
+            <strong>Haiyang Zheng</strong>, Nan Pu, Yaqi Cai, Teng Long, Wenjing Li, Nicu Sebe, Zhun Zhong.
+        </div>
+        <div class="pub-venue">
+            IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR), 2026.
+        </div>
+        <div class="pub-links">
+            <a href="#">[Paper]</a>
+            <a href="https://haiyangzheng.github.io/EAGC/">[Code]</a>
+        </div>
+        <div class="pub-desc">
+            A plug-and-play gradient-level module that mitigates gradient entanglement and improves robust generalized category discovery.
+        </div>
+    </div>
+</div>
+
+<div class="pub-item">
+    <div class="pub-img">
         <img src="/images/pubs/aaai26_cal.png" alt="ICMR 2023 Paper">
     </div>
     <div class="pub-content">
