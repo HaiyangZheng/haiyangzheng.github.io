@@ -121,7 +121,7 @@ author_profile: true
         </div>
         <div class="pub-links">
             <a href="#">[Paper]</a>
-            <a href="https://haiyangzheng.github.io/EAGC/">[Code]</a>
+            <a href="https://haiyangzheng.github.io/EAGC/" target="_blank" rel="noopener noreferrer">[Code]</a>
         </div>
         <div class="pub-desc">
             A plug-and-play gradient-level module that mitigates gradient entanglement and improves robust generalized category discovery.
